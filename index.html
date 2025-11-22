@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Chess - Battle Phase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <div id="controls-panel">
+            <h2>PLANNING PHASE</h2>
+            <button id="btn-start">⚔️ START BATTLE ⚔️</button>
+        </div>
+
+        <div id="game-board">
+            
+            <div id="game-over-modal" class="hidden">
+                <h1 id="winner-text">VICTORY!</h1>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+
+            <div id="zone-2" class="zone dropzone" data-zone="2">
+                <span class="zone-label">Enemy (2)</span>
+                <div id="container-b" class="target-container">
+                    <div id="target-b" class="target-body target">B</div>
+                    <div id="hp-b" class="hp-bar"><div class="hp-fill" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
+            <div id="zone-1" class="zone dropzone" data-zone="1">
+                <span class="zone-label">You (1)</span>
+                <div id="container-a" class="target-container">
+                    <div id="target-a" class="target-body target">A</div>
+                    <div id="hp-a" class="hp-bar"><div class="hp-fill" style="width: 100%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="selection-bar"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
